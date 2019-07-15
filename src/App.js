@@ -10,7 +10,13 @@ class App extends Component {
       items: [
         {
           id: 1,
-          title: "Item 1"
+          title: "Item 1",
+          description: "Description item 1"
+        },
+        {
+          id: 2,
+          title: "Item 2",
+          description: "Description item 2"
         }
       ]
     }
@@ -18,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <Item title={this.state.items[0].title} />
+      <Item title={this.state.items[0].title} description={this.state.items[0].description} />
     );
   }
 }

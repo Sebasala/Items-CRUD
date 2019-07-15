@@ -2,9 +2,10 @@ import React from 'react';
 
 const Item = (props) => {
     return (
-        <div className="Item">
+        <li className="Item">
             <h2>{props.title}</h2>
-        </div>
+            <p>{props.description}</p>
+        </li>
     );
 };
 
