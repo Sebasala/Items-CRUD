@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Item = (props) => {
     return (
@@ -7,6 +8,11 @@ const Item = (props) => {
             <p>{props.description}</p>
         </li>
     );
+};
+
+Item.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string
 };
 
 export default Item;

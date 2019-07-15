@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.scss';
-import Item from "./components/Item";
+import Items from "./components/Items";
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <Item title={this.state.items[0].title} description={this.state.items[0].description} />
+      <Items items={this.state.items} />
     );
   }
 }
