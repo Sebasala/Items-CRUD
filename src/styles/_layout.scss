@@ -3,6 +3,12 @@
 	box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 2 * $blh;
+}
+
 li {
 	list-style-type: none;
+	padding: 2 * $blh 2 * $blh 0;
+	margin-bottom: 2 * $blh;
 }
