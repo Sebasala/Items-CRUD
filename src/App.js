@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './styles/App.scss';
 import Items from "./components/Items";
+import Input from "./components/Input";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      input: "",
       items: [
         {
           id: 1,
@@ -20,11 +22,22 @@ class App extends Component {
         }
       ]
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      input: event.target.value
+    })
   }
 
   render() {
     return (
-      <Items items={this.state.items} />
+      <div className="App">
+        <Input value={this.state.input} onChange={this.handleChange} />
+        <Items items={this.state.items} />
+      </div>
     );
   }
 }
